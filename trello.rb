@@ -49,18 +49,15 @@ list.cards.each do |card|
   cmd = "#{configs['run_command']} #{card.name} 2>/dev/null"
   cmd_result = %x(#{cmd})
   #puts $?.exitstatus
-  if $?.exitstatus == 0
-    card.add_comment(cmd_result)
-    card.move_to_list(list_ongoing_id)
 
-    puts "-------Success: #{card.name}-------"
-    #puts cmd_result
-  else
-    card.add_comment(cmd_result)
-
-    puts "-------Failure: #{card.name}-------"
-    puts cmd_result
-  end
+  #if $?.exitstatus == 0
+  #  puts "-------Success: #{card.name}-------"
+  #else
+  #  puts "-------Failure: #{card.name}-------"
+  #end
+  puts "--------------#{card.name}---------------"
+  card.add_comment(cmd_result)
+  puts cmd_result
 end
 
 #-----------------------------
