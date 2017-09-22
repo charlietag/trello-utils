@@ -40,11 +40,12 @@ list.cards.each do |card|
   cmd_result = %x(#{cmd})
   #puts $?.exitstatus
   if $?.exitstatus == 0
-    puts "yes"
+    #puts "yes"
+    card.add_comment(cmd_result)
     card.move_to_list(list_ongoing_id)
     #puts cmd_result
-  else
-    puts "no"
+  #else
+    #puts "no"
     #puts cmd_result
   end
 end
