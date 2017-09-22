@@ -2,7 +2,17 @@
 require 'yaml'
 require 'trello'
 include Trello
+require_relative 'lib/filelock'
 
+#-----------------------------
+# Script lock
+#-----------------------------
+script = Filelock.new
+script.lock
+
+#-----------------------------
+# Setup Trello
+#-----------------------------
 config_file = File.dirname(__FILE__) + "/config/config.yml"
 configs = YAML.load_file(config_file)
 
@@ -40,12 +50,20 @@ list.cards.each do |card|
   cmd_result = %x(#{cmd})
   #puts $?.exitstatus
   if $?.exitstatus == 0
-    #puts "yes"
     card.add_comment(cmd_result)
     card.move_to_list(list_ongoing_id)
+
+    puts "-------Success: #{card.name}-------"
     #puts cmd_result
-  #else
-    #puts "no"
-    #puts cmd_result
+  else
+    card.add_comment(cmd_result)
+
+    puts "-------Failure: #{card.name}-------"
+    puts cmd_result
   end
 end
+
+#-----------------------------
+# Script unlock
+#-----------------------------
+script.unlock
