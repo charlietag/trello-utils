@@ -26,7 +26,7 @@ Trello Utilities
   * public_key
     * https://trello.com/app-key
   * member_token
-    * Assume public_key above is <font color="red">111111111111111111111</font>
+    * Assume public_key above is **111111111111111111111**
     * https://trello.com/1/authorize?expiration=never&key=111111111111111111111&name=Ruby%20Trello&response_type=token&scope=read%2Cwrite%2Caccount
 
 * Create config file from sample
