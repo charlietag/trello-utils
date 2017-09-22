@@ -9,4 +9,4 @@ trello_list_todo: MyTodolistName #todo
 trello_list_ongoing: MyOngoingListName #ongoing
 
 # External Command
-run_command: MyOSCommandOrScriptName
+run_command: MyOSCommandOrScriptName #/script/fetch_data.sh -u
