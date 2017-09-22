@@ -59,3 +59,9 @@ Trello Utilities
   ```bash
   ./trello.rb
   ```
+
+# Trello API limitation
+  * API Rate Limits
+  * http://help.trello.com/article/838-api-rate-limits
+    * To help prevent strain on Trello’s servers, our API imposes rate limits per API key for all issued tokens. There is a limit of **300 requests per 10 seconds for each API key** and no more than 100 requests per 10 second interval for each token. If a request exceeds the limit, Trello will return a 429 error.
+
