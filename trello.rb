@@ -56,7 +56,7 @@ list.cards.each do |card|
   #  puts "-------Failure: #{card.name}-------"
   #end
   puts "--------------#{card.name}---------------"
-  card.add_comment(cmd_result)
+  card.add_comment("```\n" + cmd_resulti + "\n```")
   card.move_to_list(list_ongoing_id)
   puts cmd_result
 end
