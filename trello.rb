@@ -57,6 +57,7 @@ list.cards.each do |card|
   #end
   puts "--------------#{card.name}---------------"
   card.add_comment(cmd_result)
+  card.move_to_list(list_ongoing_id)
   puts cmd_result
 end
 
