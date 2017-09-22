@@ -1,0 +1,12 @@
+#API token
+public_key:xxxxxxxxxxxxxxxx
+member_token:yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+
+# Trello Resource
+trello_account: MyTrelloAccountID #charlie123123
+trello_board: MyBoardName #HelpCenter
+trello_list_todo: MyTodolistName #todo
+trello_list_ongoing: MyOngoingListName #ongoing
+
+# External Command
+run_command: MyOSCommandOrScriptName
