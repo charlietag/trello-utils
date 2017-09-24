@@ -66,4 +66,5 @@ Trello Utilities
   * To help prevent strain on Trello’s servers, our API imposes rate limits per API key for all issued tokens.
   * There is a limit of **300 requests per 10 seconds for each API key** and **no more than 100 requests per 10 second interval for each token**.
   * If a request exceeds the limit, Trello will return a 429 error.
-
+* https://developers.trello.com/page/webhooks
+  * For some cases, which someone own a callback server online, webhook is much more useful.
