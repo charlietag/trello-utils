@@ -1,5 +1,6 @@
 #!/usr/local/bin/ruby
 require 'yaml'
+require 'addressable/uri'
 require 'trello'
 include Trello
 require_relative 'lib/filelock'
@@ -46,6 +47,10 @@ end
 #-----------------------------
 list = List.find(list_todo_id)
 list.cards.each do |card|
+  card.name.strip!
+  uri = Addressable::URI.parse(card.name).host rescue nil # rescue error for none URL string
+  card.name = uri if ! uri.to_s.empty?
+
   cmd = "#{configs['run_command']} #{card.name} 2>/dev/null"
   cmd_result = %x(#{cmd})
   #puts $?.exitstatus
@@ -57,6 +62,7 @@ list.cards.each do |card|
   #end
   puts "--------------#{card.name}---------------"
   card.add_comment("```\n" + cmd_result + "\n```")
+  card.save
   card.move_to_list(list_ongoing_id)
   puts cmd_result
 end
