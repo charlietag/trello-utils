@@ -48,6 +48,11 @@ Trello Utilities
   trello_list_todo: MyTodolistName #todo
   trello_list_ongoing: MyOngoingListName #ongoing
   
+  # String Type
+  # url | text
+  # if card.name is a url, parse host only
+  string_type: url
+  
   # External Command
   # the following example will execute: /script/fetch_data.sh -u www.google.com (assume card.name is "www.google.com"
   # ex. /script/fetch_data.sh -u
