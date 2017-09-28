@@ -56,6 +56,7 @@ end
 # Start to analyze
 #-----------------
 board = Board.find(board_id)
+
 puts "********************************************"
 puts "          Count by list"
 puts "********************************************"
@@ -71,7 +72,7 @@ puts "          Duration of card"
 puts "********************************************"
 board.lists.each do |list|
   puts "---------------------------------"
-  puts list.name
+  puts "LIST: " + list.name
   puts "---------------------------------"
   list.cards.each do |card|
     #puts "---" + card.name + "---"
