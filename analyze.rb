@@ -71,9 +71,7 @@ puts "********************************************"
 puts "          Duration of card"
 puts "********************************************"
 board.lists.each do |list|
-  puts "---------------------------------"
-  puts "LIST: " + list.name
-  puts "---------------------------------"
+  puts "---List: #{list.name}---"
   list.cards.each do |card|
     #puts "---" + card.name + "---"
     #puts card.created_at
