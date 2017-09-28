@@ -60,10 +60,17 @@ Trello Utilities
   ```
 
 * Start to use
+  * Fetch card name and execute external command
 
-  ```bash
-  ./trello.rb
-  ```
+    ```bash
+    ./trello.rb
+    ```
+
+  * Analyze trello usage
+
+    ```bash
+    ./analyze.rb
+    ```
 
 # Trello API limitation
 ## API Rate Limits
