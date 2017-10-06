@@ -14,6 +14,10 @@ Trello Utilities
 
 # Installation
 
+* Install latest ruby (Choose one of below)
+  * https://www.ruby-lang.org
+  * http://rvm.io
+
 * Download and install dependencies gem packages
 
   ```bash
