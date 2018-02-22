@@ -1,6 +1,6 @@
 #API token
-public_key:xxxxxxxxxxxxxxxx
-member_token:yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+public_key: xxxxxxxxxxxxxxxx
+member_token: yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
 
 # Trello Resource
 trello_account: MyTrelloAccountID #charlie123123
@@ -14,6 +14,6 @@ trello_list_ongoing: MyOngoingListName #ongoing
 string_type: url
 
 # External Command
-# the following example will execute: /script/fetch_data.sh -u www.google.com (assume card.name is "www.google.com"
+# the following example will execute: /script/fetch_data.sh -u www.google.com (assume card.name is "www.google.com")
 # ex. /script/fetch_data.sh -u
 run_command: MyOSCommandOrScriptName
